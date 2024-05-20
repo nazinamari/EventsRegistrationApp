@@ -1,0 +1,41 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list__additional {
+    text-align: center;
+}
+
+.linkWrap {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: navy;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+
+    &:active {
+        color: white;
+        /* background-color: #9c27b0; */
+    }
+}
+
+.link:hover {
+    /* text-decoration: underline; */
+    color: black;
+    background-color: wheat;
+}
+
+/* .isActive {
+    text-decoration: underline;
+} */
