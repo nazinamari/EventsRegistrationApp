@@ -28,7 +28,7 @@ export default function HomePage() {
     return (
         <div className={css.container}>
             {loading && <Loader></Loader>}
-            {error && <p>Something get wrong</p>}
+            {error && <p>Something went wrong. Please try again later.</p>}
             <Title>Events</Title>
             {events.length > 0 && <EventsList events={events} />}
         </div>

@@ -1,33 +1,30 @@
-import { Suspense } from 'react';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import css from './EventCard.module.css';
-// import { formatTime } from '../utils/dateUtils';
-import { NavLink, Outlet } from 'react-router-dom';
 
-export default function Event({
-    data: { title, description, date, organizer },
-}) {
+export default function EventCard({ data: { title, description, id } }) {
     return (
         <div className={css.card}>
-            <p>{title}</p>
-            <p>{description}</p>
-            {/* <p>Event date: {formatTime(date)}</p>
-            <p>{organizer}</p> */}
+            <Link to={`/events/${id}`} className={css.item__link}>
+                <p>{title}</p>
+                <p>{description}</p>
+            </Link>
+
             <ul className={css.list__additional}>
                 <div className={css.linkWrap}>
                     <li>
-                        <NavLink className={css.link} to="register">
+                        <NavLink
+                            className={css.link}
+                            to={`/events/${id}/register`}
+                        >
                             Register
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className={css.link} to="view">
+                        <NavLink className={css.link} to={`/events/${id}/view`}>
                             View
                         </NavLink>
                     </li>
                 </div>
-                <Suspense fallback={null}>
-                    <Outlet />
-                </Suspense>
             </ul>
         </div>
     );

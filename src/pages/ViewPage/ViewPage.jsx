@@ -1,11 +1,11 @@
-import Form from '../../components/Form /Form';
+import EventView from '../../components/EventView/EventView';
 import Title from '../../components/Title/Title';
 
-export default function RegistrationPage() {
+export default function ViewPage() {
     return (
         <div>
             <Title>Event Registration</Title>
-            <Form />
+            <EventView />
         </div>
     );
 }

@@ -1,10 +1,10 @@
-import { useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import { getEventById } from '../../services/api';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
 export default function EventPage() {
     const { eventId } = useParams();
-    const [participants, setParticipants] = useState([]);
+    const [event, setEvent] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
 
@@ -13,7 +13,7 @@ export default function EventPage() {
             setLoading(true);
             try {
                 const response = await getEventById(eventId);
-                setParticipants(response);
+                setEvent(response);
             } catch (error) {
                 setError(true);
             } finally {
@@ -25,11 +25,14 @@ export default function EventPage() {
 
     return (
         <div>
-            {participants && (
+            {event && location.pathname === `/events/${eventId}` && (
                 <div>
-                    <p>{participants.title}</p>
+                    <h1>{event.title}</h1>
                 </div>
             )}
+            <Suspense fallback={null}>
+                <Outlet />
+            </Suspense>
         </div>
     );
 }
