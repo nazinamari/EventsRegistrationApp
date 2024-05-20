@@ -11,7 +11,7 @@ export default function App() {
         <div>
             <Suspense fallback={null}>
                 <Routes>
-                    <Route path="/events" element={<HomePage />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/events/:eventId" element={<EventPage />}>
                         <Route path="regester" element={<RegistrationForm />} />
                         <Route path="view" element={<EventView />} />

@@ -2,6 +2,6 @@
 
 npm run dev
 
-<!-- main page - http://localhost:****/events -->
+<!-- main page - http://localhost:****-->
 
 <!-- event page - /events/:eventId -->
