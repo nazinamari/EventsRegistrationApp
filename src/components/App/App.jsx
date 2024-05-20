@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import HomePage from '../../pages/HomePage/HomePage';
-import EventView from '../EventView/EventView';
 import { Suspense } from 'react';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import EventPage from '../../pages/EventPage/EventPage';
