@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Loader from '../../components/Loader/Loader';
 import Title from '../../components/Title/Title';
-import fetchAllEvents from '../../services/api';
+import { fetchAllEvents } from '../../services/api';
 import EventsList from '../../components/EventsList/EventsList';
 import css from './HomePage.module.css';
 
