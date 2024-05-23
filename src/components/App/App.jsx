@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 import EventPage from '../../pages/EventPage/EventPage';
 import RegistrationPage from '../../pages/RegistrationPage/RegistrationPage';
-import ViewPage from '../../pages/ViewPage/ViewPage';
+import EventParticipantsPage from '../../pages/EventParticipantsPage/EventParticipantsPage';
 
 export default function App() {
     return (
@@ -14,7 +14,10 @@ export default function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/events/:eventId" element={<EventPage />}>
                         <Route path="register" element={<RegistrationPage />} />
-                        <Route path="view" element={<ViewPage />} />
+                        <Route
+                            path="view"
+                            element={<EventParticipantsPage />}
+                        />
                     </Route>
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
