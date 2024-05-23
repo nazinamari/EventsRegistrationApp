@@ -1,0 +1,65 @@
+.form__container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form__container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.form__container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form__container input[type='text'],
+.form__container input[type='email'],
+.form__container input[type='date'] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form__container .radio-group {
+    margin-bottom: 20px;
+}
+
+.form__container .radio-group label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.form__container input[type='radio'] {
+    margin-right: 5px;
+}
+
+.form__container button[type='submit'] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.form__container button[type='submit']:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}

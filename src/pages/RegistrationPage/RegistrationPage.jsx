@@ -1,11 +1,11 @@
-import Form from '../../components/Form /Form';
+import EventRegistrationForm from '../../components/EventRegistrationForm/EventRegistrationForm';
 import Title from '../../components/Title/Title';
 
 export default function RegistrationPage() {
     return (
         <div>
             <Title>Event Registration</Title>
-            <Form />
+            <EventRegistrationForm />
         </div>
     );
 }
